@@ -30,4 +30,12 @@ class BasicRoutingTest extends TestCase
         $this->get('/*')
             ->assertSeeText('404 nothing here');
     }
+
+    public function testView() {
+        $this->get('/hello')
+            ->assertSeeText('Hello and Good bye');
+        
+        $this->get('/hello-again')
+            ->assertSeeText('Hello and Good bye');
+    }
 }

@@ -25,3 +25,6 @@ Route::redirect('/redirect', '/test');
 Route::fallback(function () {
     return "404 nothing here";
 });
+
+Route::view('/hello', 'hello', ['name' => 'and Good bye']);
+Route::view('/hello-again', 'template.world', ['name' => 'and Good bye']);
